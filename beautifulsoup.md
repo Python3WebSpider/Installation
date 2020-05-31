@@ -1,20 +1,22 @@
-## 1.3.2 BeautifulSoup的安装
+# BeautifulSoup的安装
 
 BeautifulSoup 是 Python 的一个 HTML 或 XML 的解析库，我们可以用它来方便地从网页中提取数据，它拥有强大的 API 和多样的解析方式，本节我们了解下它的安装方式。
 
-### 1. 相关链接
+## 相关链接
 
 * 官方文档：[https://www.crummy.com/software/BeautifulSoup/bs4/doc](https://www.crummy.com/software/BeautifulSoup/bs4/doc)
 * 中文文档：[https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh)
 * PyPi：[https://pypi.python.org/pypi/beautifulsoup4](https://pypi.python.org/pypi/beautifulsoup4)
 
-### 2. 准备工作
+## 准备工作
 
-BeautifulSoup 的 HTML 和 XML 解析器是依赖于 LXML 库的，所以在此之前请确保已经成功安装好了 LXML 库，具体的安装方式参见上节。
+BeautifulSoup 的 HTML 和 XML 解析器是依赖于 lxml 库的，所以在此之前请确保已经成功安装好了 lxml 库，具体的安装方式参见 lxml 的安装。
 
-### 3. Pip 安装
+## 安装方法
 
-目前 BeautifulSoup 的最新版本是 4.x 版本，之前的版本已经停止开发了，推荐使用 Pip 来安装，安装命令如下：
+### pip 安装
+
+目前 BeautifulSoup 的最新版本是 4.x 版本，之前的版本已经停止开发了，推荐使用 pip3 来安装，安装命令如下：
 
 ```
 pip3 install beautifulsoup4
@@ -22,14 +24,14 @@ pip3 install beautifulsoup4
 
 命令执行完毕之后即可完成安装。
 
-### 4. Wheel安装
+### wheel 安装
 
-当然也可以从 PyPi 下载 Wheel 文件安装，链接如下：
+当然也可以从 PyPi 下载 wheel 文件安装，链接如下：
 [https://pypi.python.org/pypi/beautifulsoup4](https://pypi.python.org/pypi/beautifulsoup4)
 
-然后 Pip 安装 Wheel 文件即可。
+然后 pip3 安装 Wheel 文件即可。
 
-### 5. 验证安装
+## 验证安装
 
 安装完成之后可以运行下方的代码验证一下。
 

@@ -8,7 +8,7 @@ lxml 是 Python 的一个解析库，支持 HTML 和 XML 的解析，支持 XPat
 * GitHub：[https://github.com/lxml/lxml](https://github.com/lxml/lxml)
 * PyPi：[https://pypi.python.org/pypi/lxml](https://pypi.python.org/pypi/lxml)
 
-## 安装
+## 安装方法
 
 ### Windows 下的安装
 
