@@ -18,11 +18,11 @@ MySQL 是一个轻量级的关系型数据库，以表的形式来存储数据�
 
 下载完成之后直接双击安装包即可安装，直接选择默认选项点击下一步安装即可，记住在此页设置的密码，如图所示：
 
-![](https://qiniu.cuiqingcai.com/ba6k0.jpg)
+![img](https://qiniu.cuiqingcai.com/vpej6.jpg)
 
 安装完成之后我们可以在电脑-管理-服务页面开启和关闭 MySQL 服务，如图所示：
 
-![](https://qiniu.cuiqingcai.com/tpwc2.jpg)
+![](https://qiniu.cuiqingcai.com/guo15.jpg)
 
 如果启动了 MySQL 服务，那么我们就可以使用它来进行数据存储了。
 

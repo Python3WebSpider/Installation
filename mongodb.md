@@ -1,4 +1,4 @@
-## 1.4.2 MongoDB安装
+# MongoDB安装
 
 MongoDB 是由 C++ 语言编写的非关系型数据库，是一个基于分布式文件存储的开源数据库系统，其内容存储形式类似 Json 对象，它的字段值可以包含其他文档，数组及文档数组，非常灵活。
 
@@ -6,42 +6,36 @@ MongoDB 支持多种平台，包括 Windows、Linux、Mac OS、Solaris 等，在
 
 本节我们来看下它的安装过程。
 
-### 1. 相关链接
+## 相关链接
 
 * 官方网站：[https://www.mongodb.com](https://www.mongodb.com)
 * 官方文档：[https://docs.mongodb.com](https://docs.mongodb.com)
 * GitHub：[https://github.com/mongodb](https://github.com/mongodb)
 * 中文教程：[http://www.runoob.com/mongodb/mongodb-tutorial.html](http://www.runoob.com/mongodb/mongodb-tutorial.html)
 
-### 2. Windows下的安装
+## 安装方法
 
-直接在官网下载安装包即可，链接为：[https://www.mongodb.com/download-center#community](https://www.mongodb.com/download-center#community)，页面如图 1-29 所示：
+### Windows 下的安装
 
-![](./assets/1-29.jpg)
+直接在官网下载安装包即可，链接为：[https://www.mongodb.com/download-center#community](https://www.mongodb.com/download-center#community)，页面如图所示：
 
-图 1-29 下载页面
+![](https://qiniu.cuiqingcai.com/0ugwg.jpg)
 
 直接点击 Download 下载 msi 安装包即可。
 
-下载完成之后双击开始安装，指定 MongoDB 的安装路径，例如在此处我指定安装路径为 C:\MongoDB\Server\3.4，当然路径可以自行选择，如图 1-30 所示：
+下载完成之后双击开始安装，指定 MongoDB 的安装路径，例如在此处我指定安装路径为 C:\MongoDB\Server\3.4，当然路径可以自行选择，如图所示：
 
-![](./assets/1-30.jpg)
-
-图 1-30 安装页面
+![img](https://qiniu.cuiqingcai.com/ubyan.jpg)
 
 点击下一步执行安装即可。
 
-安装成功之后，进入 MongoDB 的安装目录，在此处所在路径是 C:\MongoDB\Server\3.4，在 bin 目录下新建同级目录 data，如图 1-31 所示：
+安装成功之后，进入 MongoDB 的安装目录，在此处所在路径是 C:\MongoDB\Server\3.4，在 bin 目录下新建同级目录 data，如图所示：
 
-![](./assets/1-31.jpg)
+![img](https://qiniu.cuiqingcai.com/a67td.jpg)
 
-图 1-31 新建 data 目录结果
+然后进入 data 文件夹新建子文件夹 db，作为数据目录存储的文件夹，如图所示：
 
-然后进入 data 文件夹新建子文件夹 db，作为数据目录存储的文件夹，如图 1-32 所示：
-
-![](./assets/1-32.jpg)
-
-图 1-32 新建 db 目录结果
+![img](https://qiniu.cuiqingcai.com/f9g7t.jpg)
 
 之后打开命令行，进入 MongoDB 安装目录的 bin 目录下，运行 MongoDB 服务：
 
@@ -51,29 +45,23 @@ mongod --dbpath "C:\MongoDB\Server\3.4\data\db"
 
 请记得将此处的路径替换成你的主机 MongoDB 安装路径。
 
-运行之后会出现一些输出信息，如图 1-33 所示：
+运行之后会出现一些输出信息，如图所示：
 
-![](./assets/1-33.jpg)
-
-图 1-33 运行结果
+![img](https://qiniu.cuiqingcai.com/m7c2x.jpg)
 
 这样我们就已经将 MongoDB 服务启动了。
 
 但是这样如果我们想一直使用 MongoDB 就不能关闭此命令行，如果意外关闭或重启 MongoDB 服务就不能使用了，这显然不是我们想要的，所以接下来我们还需将 MongoDB 配置成系统服务。
 
-首先我们要以管理员模式运行命令行，注意此处一定要是管理员模式运行，否则可能配置失败，如图 1-34 所示：
+首先我们要以管理员模式运行命令行，注意此处一定要是管理员模式运行，否则可能配置失败，如图所示：
 
-![](./assets/1-34.jpg)
-
-图 1-34 管理员模式
+![img](https://qiniu.cuiqingcai.com/eb12e.jpg)
 
 开始菜单搜索 cmd，找到命令行，然后右键以管理员身份运行即可。
 
-随后新建一个日志文件，在 bin 目录同级目录新建 logs 文件夹，进入之后新建一个 mongodb.log 文件，用于保存 MongoDB 运行的日志，如图 1-35 所示。
+随后新建一个日志文件，在 bin 目录同级目录新建 logs 文件夹，进入之后新建一个 mongodb.log 文件，用于保存 MongoDB 运行的日志，如图所示：
 
-![](./assets/1-35.jpg)
-
-图 1-35 新建 mongodb.log 结果
+![img](https://qiniu.cuiqingcai.com/9h3jf.jpg)
 
 在命令行下输入如下内容：
 
@@ -81,27 +69,21 @@ mongod --dbpath "C:\MongoDB\Server\3.4\data\db"
 mongod --bind_ip 0.0.0.0 --logpath "C:\MongoDB\Server\3.4\logs\mongodb.log" --logappend --dbpath "C:\MongoDB\Server\3.4\data\db" --port 27017 --serviceName "MongoDB" --serviceDisplayName "MongoDB" --install
 ```
 
-这里的意思是绑定 IP 为 0.0.0.0，即任意 IP 均可访问，指定日志路径、数据库路径、端口，指定服务名称，注意这里依然需要把路径替换成你的 MongoDB 安装路径，运行此命令后即可安装服务，运行结果如图 1-36 所示：
+这里的意思是绑定 IP 为 0.0.0.0，即任意 IP 均可访问，指定日志路径、数据库路径、端口，指定服务名称，注意这里依然需要把路径替换成你的 MongoDB 安装路径，运行此命令后即可安装服务，运行结果如图所示：
 
-![](./assets/1-36.jpg)
-
-图 1-36 运行结果
+![img](https://qiniu.cuiqingcai.com/og941.jpg)
 
 如果没有出现错误提示，则证明 MongoDB 服务已经安装成功。
 
-可以在服务管理页面查看到系统服务，如图 1-37 所示：
+可以在服务管理页面查看到系统服务，如图所示：
 
-![](./assets/2017-06-06-11-52-51.jpg)
-
-图 1-37 系统服务页面
+![img](https://qiniu.cuiqingcai.com/s2zr5.jpg)
 
 可以设置它的开机启动方式，如自动启动或手动启动等。这样我们就可以非常方便地管理 MongoDB 服务了。
 
-启动服务之后我们在命令行下就可以利用 mongo 命令进入 MongoDB 命令交互环境了，如图 1-38 所示：
+启动服务之后我们在命令行下就可以利用 mongo 命令进入 MongoDB 命令交互环境了，如图所示：
 
-![](./assets/1-38.jpg)
-
-图 1-38 命令行模式
+![img](https://qiniu.cuiqingcai.com/bu40b.jpg)
 
 这样 Windows 下 MongoDB 配置就完成了。
 
