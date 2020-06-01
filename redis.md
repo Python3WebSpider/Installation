@@ -1,8 +1,8 @@
-## 1.4.3 Redis的安装
+# Redis的安装
 
 Redis 是一个基于内存的高效的非关系型数据库，本节我们来了解下 Redis 在各个平台的安装过程。
 
-### 1. 相关链接
+## 相关链接
 
 * 官方网站：[https://redis.io](https://redis.io)
 * 官方文档：[https://redis.io/documentation](https://redis.io/documentation)
@@ -12,33 +12,31 @@ Redis 是一个基于内存的高效的非关系型数据库，本节我们来�
 * Redis Desktop Manager：[https://redisdesktop.com](https://redisdesktop.com)
 * Redis Desktop Manager GitHub：[https://github.com/uglide/RedisDesktopManager](https://github.com/uglide/RedisDesktopManager)
 
-### 2. Windows下的安装
+## 安装方法
+
+### Windows 下的安装
 
 Redis 在 Windows 下可以直接到 GitHub 的发行版本里面下载，[https://github.com/MSOpenTech/redis/releases](https://github.com/MSOpenTech/redis/releases)。
 
-打开之后有许多发行版本及其安装包，如图 1-39 所示：
+打开之后有许多发行版本及其安装包，如图所示：
 
-![](./assets/1-39.jpg)
-
-图 1-39 下载页面
+![img](https://qiniu.cuiqingcai.com/ocrez.jpg)
 
 可以下载 Redis-x64-3.2.100.msi 安装即可。
 
 安装过程比较简单，直接点击下一步安装即可，安装完成之后 Redis 便会启动。
 
-在系统服务里可以观察到多了一个正在运行到 Redis 服务，如图 1-40 所示：
+在系统服务里可以观察到多了一个正在运行到 Redis 服务，如图所示：
 
-![](./assets/1-40.jpg)
+![img](https://qiniu.cuiqingcai.com/zrf69.jpg)
 
-图 1-40 系统服务页面
-
-另外推荐下载一个 Redis Desktop Manager 可视化管理工具，来管理Redis。
+另外推荐下载一个 Redis Desktop Manager 可视化管理工具，来管理 Redis。
 
 可以到官方网站下载，链接为：[https://redisdesktop.com/download](https://redisdesktop.com/download) 也可以到 GitHub 下载最新发行版本，链接为：[https://github.com/uglide/RedisDesktopManager/releases](https://github.com/uglide/RedisDesktopManager/releases)。
 
 安装之后直接连接本地 Redis 即可，简单方便。
 
-### 3. Linux下的安装
+### Linux下的安装
 
 这里依然还是分为两类平台介绍。
 
@@ -138,7 +136,7 @@ sudo systemctl restart redis
 
 这样就可以远程连接 Redis 了。
 
-### 4. Mac下的安装
+### Mac 下的安装
 
 推荐使用 Homenbrew 安装，执行 brew 命令即可。
 
@@ -167,3 +165,4 @@ brew services restart redis
 ```
 
 另外在 Mac 下也可以安装 Redis Desktop Manager 可视化管理工具来管理 Redis。
+
