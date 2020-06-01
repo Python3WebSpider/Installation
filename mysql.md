@@ -1,34 +1,32 @@
-## 1.4.1 MySQL的安装
+# MySQL的安装
 
 MySQL 是一个轻量级的关系型数据库，以表的形式来存储数据，本节我们来了解下它的安装方式。
 
-### 1. 相关链接
+## 相关链接
 
 * 官方网站：[https://www.mysql.com/cn](https://www.mysql.com/cn)
 * 下载地址：[https://www.mysql.com/cn/downloads](https://www.mysql.com/cn/downloads)
 * 中文教程：[http://www.runoob.com/mysql/mysql-tutorial.html](http://www.runoob.com/mysql/mysql-tutorial.html)
 
-### 2. Windows下的安装
+## 安装方法
+
+### Windows下的安装
 
 对于 Windows 来说，可以直接在百度软件中心搜索 MySQL，下载其提供的 MySQL 安装包，速度还是比较快的。
 
 当然最安全稳妥的方式就是直接到官网下载安装包进行安装。可以访问官方网站下载，[https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)，但有个缺点是是需要注册登录才可以下载，而且速度不快。
 
-下载完成之后直接双击安装包即可安装，直接选择默认选项点击下一步安装即可，记住在此页设置的密码，如图 1-27 所示：
+下载完成之后直接双击安装包即可安装，直接选择默认选项点击下一步安装即可，记住在此页设置的密码，如图所示：
 
-![](./assets/1-27.jpg)
+![](https://qiniu.cuiqingcai.com/ba6k0.jpg)
 
-图 1-27 安装页面
+安装完成之后我们可以在电脑-管理-服务页面开启和关闭 MySQL 服务，如图所示：
 
-安装完成之后我们可以在电脑-管理-服务页面开启和关闭 MySQL 服务，如图 1-28 所示：
-
-![](./assets/1-28.jpg)
-
-图 1-28 系统服务页面
+![](https://qiniu.cuiqingcai.com/tpwc2.jpg)
 
 如果启动了 MySQL 服务，那么我们就可以使用它来进行数据存储了。
 
-### 3. Linux下的安装
+### Linux下的安装
 
 下面仍然分不同平台进行介绍。
 
@@ -112,7 +110,7 @@ bind-address = 127.0.0.1
 
 到此为止，Linux 下安装 MySQL 的过程结束。
 
-### 4. Mac下的安装
+### Mac下的安装
 
 推荐使用 Homebrew 安装，执行 brew 命令即可。
 
